@@ -7,7 +7,18 @@
 </head>
 <body>
     <script>
-        window.open('https://youtu.be/dQw4w9WgXcQ')
+        //window.open('https://youtu.be/dQw4w9WgXcQ')
+
+        function openInNewTab(url) {
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        }
+
+        openInNewTab('https://youtu.be/dQw4w9WgXcQ');
     </script>
 </body>
 </html>
